@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive CV Web App</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+    <div class="logo">logo</div>
+    <div class="header-right">
+      <div class="toggle-btn" id="toggle-menu">&#9776;</div>
+      <!-- Dark mode button moved inside nav on small screens -->
+    </div>
+    <nav id="nav-links">
+      <a href="#">menu1</a>
+      <a href="#">menu2</a>
+      <a href="#">menu3</a>
+      <button id="mode-toggle">🌙/☀️</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <img src="https://via.placeholder.com/150" alt="Profile Image" class="profile-img" />
+      <div class="about">
+        <h2>Title</h2>
+        <h3>About me</h3>
+        <p>Here about me text...</p>
+        <button class="download-btn">Download CV Button</button>
+      </div>
+    </section>
+
+    <section class="info-grid">
+      <div>
+        <h3>Skills</h3>
+        <ul>
+          <li>Skill 1</li><li>Skill 2</li><li>Skill 3</li><li>Skill 4</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Experience</h3>
+        <ul>
+          <li>Exp 1</li><li>Exp 2</li><li>Exp 3</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Education</h3>
+        <ul>
+          <li>School 1</li><li>School 2</li><li>School 3</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
