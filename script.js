@@ -1,17 +1,15 @@
-const nav = document.getElementById("nav-links");
-const toggleMenu = document.getElementById("toggle-menu");
-const modeToggle = document.getElementById("mode-toggle");
-
-// Toggle mobile menu
-toggleMenu.addEventListener("click", () => {
-  nav.classList.toggle("open");
-});
-
-// Persist dark/light mode
-const isDark = localStorage.getItem("theme") === "dark";
-if (isDark) document.body.classList.add("dark");
-
-modeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-  localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
-});
+document.getElementById('toggle-menu').addEventListener('click', () => {
+  document.getElementById('nav-links').classList.toggle('show');
+});
+
+document.getElementById('mode-toggle').addEventListener('click', () => {
+  const root = document.documentElement;
+  const currentBg = getComputedStyle(root).getPropertyValue('--bg-color');
+  if (currentBg.trim() === '#111') {
+    root.style.setProperty('--bg-color', '#fff');
+    root.style.setProperty('--text-color', '#111');
+  } else {
+    root.style.setProperty('--bg-color', '#111');
+    root.style.setProperty('--text-color', '#eee');
+  }
+});
