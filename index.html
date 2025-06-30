@@ -40,11 +40,10 @@
     .profile {
       display: flex;
       flex-wrap: wrap;
-      gap: 2rem;
       padding: 2rem;
     }
     .profile-image {
-      flex: 1 1 200px;
+      flex: 1 1;
       text-align: center;
     }
     .profile-image img {
@@ -53,7 +52,7 @@
       border-radius: 10px;
     }
     .profile-text {
-      flex: 2 1 300px;
+      flex: 1 1;
     }
     .profile-name {
       margin-top: 1rem;
@@ -105,7 +104,13 @@
     }
     .social-icons a:hover{
        color:#800000; 
+    }
+    .about-text{
+       width: 25rem;
     }
+    .quote{
+	    text-align: center;
+    }
     @media (max-width: 768px) {
       .nav-links {
         display: none;
@@ -122,14 +127,14 @@
     <div class="logo">
       <img src="logo.svg" alt="Logo" width="40" height="40">
     </div>
-    <p class="quote">🥇🏆 Trying, cause 'Trying is winning'.</quote>
+    <p class="quote">🥇🏆 Trying, cause 'Trying is winning'.</p>
     <div class="theme-toggle" onclick="toggleTheme()">
       <i id="theme-icon" class="fas fa-moon"></i>
     </div>
   </header>
 
   <section class="profile">
-    <div class="profile-image">
+	  <div class="profile-image">
       <img src="profile-image.jpg" alt="Profile Image" width="100" height="100">
       <div class="profile-name">
         <h2 class="name">MD. MUBTASHIM FUAD</h2>
@@ -138,11 +143,11 @@
     </div>
     <div class="profile-text">
       <h3>About me</h3>
-      <p>I'm passionate about all things Cloud, Linux, Computer systems,<br> and networking, with a strong craving to automate<br>all repetitive and boring tasks.</p>
+      <p class="about-text">I'm passionate about all things Cloud, Linux, Computer systems, and networking, with a strong craving to automate all repetitive and boring tasks.</p>
       <div class="cv-button">
         <button>Download CV</button>	
         <button>My Blog</button>
-      </div>
+      </div>
       <div class="social-icons">
         <a href="mailto:contact.themmfuad@gmail.com"><i class="fas fa-envelope"></i></a>
         <a href="https://www.linkedin.com/in/themmfuad/"><i class="fab fa-linkedin"></i></a>
@@ -156,46 +161,60 @@
     <div class="info-section">
       <h3>Skills</h3>
       <div class="skill-item">
-        <i class="fas fa-code"></i> Skill 1<br>
-        <span>Description for skill 1</span>
+	      <i class="fa-solid fa-laptop-code"></i> <strong>DevOps</strong><br>
+        <span>I'm specialized in streamlining development and operations, making software delivery faster and more reliable. From automation to cloud deployment.</span>
       </div>
       <div class="skill-item">
-        <i class="fas fa-database"></i> Skill 2<br>
-        <span>Description for skill 2</span>
+	      <i class="fa-brands fa-aws"></i> <strong>AWS</strong><br>
+        <span>I'm experienced in designing and managing scalable, secure cloud solutions on AWS. Whether it's EC2, S3, or full-stack infrastructure</span>
       </div>
       <div class="skill-item">
-        <i class="fas fa-terminal"></i> Skill 3<br>
-        <span>Description for skill 3</span>
+	      <i class="fa-brands fa-docker"></i> <strong>Docker & K8s</strong><br>
+        <span>I can containerize applications with Docker to keep them consistent across environments, and use Kubernetes to manage and scale them reliably. I can build systems that are smooth to deploy and easy to maintain.</span>
       </div>
+      <div class="skill-item">
+	      <i class="fa-brands fa-linux"></i> <strong>Linux</strong><br>
+	      <span>I'm experienced in managing Linux systems, from configuring servers and automating tasks with shell scripts to resolving issues at the command line.</span>
+      </div>
+      <div class="skill-item">
+	      <i class="fa-solid fa-network-wired"></i> <strong>CCNA | MTCNA | MTCRE</strong><br>
+	      <span>I’ve completed professional training and gained hands-on job experience in networking, focusing on CCNA, MTCNA, and MTCRE-level skills. I'm also vendor-certified in MikroTik’s MTCNA, validating my expertise in real-world network design and management.</span>
+      </div>
+    
     </div>
     <div class="info-section">
       <h3>Experience</h3>
       <div class="job-item">
-        <strong>Job Title</strong><br>
-        <span class="item-logo"></span>Company Name<br>
-        <span>Description for job 1</span>
-      </div>
-      <div class="job-item">
-        <strong>Job Title</strong><br>
-        <span class="item-logo"></span>Company Name<br>
-        <span>Description for job 2</span>
+        <strong>Assistant Network Engineer</strong><br>
+        <span class="item-logo">
+<img src="maxhub.jpg" alt="Maxhub" width="20" height="20">
+	</span>MaxHub Limited<br>
+        <span>Dec 2023 - Present</span>
       </div>
     </div>
     <div class="info-section">
       <h3>Education</h3>
       <div class="edu-item">
-        <strong>Degree</strong><br>
-        <span class="item-logo"></span>Institute Name<br>
-        <span>Description for degree 1</span>
+	      <strong>B.Sc. in Computer Science and Engineering</strong><br>
+        <span class="item-logo">
+<img src="diu.jpg" alt="DIU" width="20" height="20">
+	</span>Dhaka International University<br>
+        <span>Went through tough situations while picking up new skills fast — special shoutout to Calculus for the pain.</span>
       </div>
       <div class="edu-item">
-        <strong>Degree</strong><br>
-        <span class="item-logo"></span>Institute Name<br>
-        <span>Description for degree 2</span>
+        <strong>Diploma in Computer Technology</strong><br>
+        <span class="item-logo">
+<img src="npi.jpg" alt="DIU" width="20" height="20">
+	</span>Naogaon Polytechnic Institute<br>
+        <span>Learned practical skills, especially in computer networks, and gained solid knowledge of core computer technologies.</span>
       </div>
     </div>
   </section>
 
+
+  <footer>
+	  <p class="quote">&copy; 2025 MD MUBTASHIM FUAD. All rights reserved.</p>
+  </footer>
   <script>
     function toggleTheme() {
       const html = document.documentElement;
