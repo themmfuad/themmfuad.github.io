@@ -1,234 +1,386 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="light">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive CV Page</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    :root {
-      --bg-color: #fff;
-      --text-color: #000;
-      --icon-color: #353935;
-    }
-    [data-theme="dark"] {
-      --bg-color: #121212;
-      --text-color: #f5f5f5;
-      --icon-color: #aaa;
-    }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0px 15px;
-      border-bottom: 1px solid #ccc;
-    }
-    .nav-links {
-      display: flex;
-      gap: 1rem;
-    }
-    .theme-toggle {
-      cursor: pointer;
-      font-size: 1.2rem;
-    }
-    .profile {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 2rem;
-    }
-    .profile-image {
-      flex: 1 1;
-      text-align: center;
-    }
-    .profile-image img {
-      width: 150px;
-      height: 150px;
-      border-radius: 10px;
-    }
-    .profile-text {
-      flex: 1 1;
-    }
-    .profile-name {
-      margin-top: 1rem;
-      text-align: center;
-    }
-    .cv-button {
-      margin: 1rem 0;
-    }
-    .social-icons {
-      display: flex;
-      gap: 1rem;
-      font-size: 1.2rem;
-    }
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      padding: 2rem;
-    }
-    .info-section h3 {
-      margin-bottom: 1rem;
-    }
-    .skill-item, .job-item, .edu-item {
-      margin-bottom: 1rem;
-    }
-    .skill-item i {
-      margin-right: 0.5rem;
-    }
-    .item-logo {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      background-color: #aaa;
-      margin-right: 0.5rem;
-      vertical-align: middle;
-    }
-    .name{
-      margin: 0px; 
-    } 
-    .title{
-       margin: 0px;
-       padding-top: .2rem;
-       color: #800000;
-    }
-    .social-icons a{
-       color:#353935;
-       color: var(--icon-color);
-       
-    }
-    .social-icons a:hover{
-       color:#800000; 
-    }
-    .about-text{
-       width: 25rem;
-    }
-    .quote{
-	    text-align: center;
-    }
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-      .hamburger {
-        display: block;
-        cursor: pointer;
-      }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="logo">
-      <img src="logo.svg" alt="Logo" width="40" height="40">
-    </div>
-    <p class="quote">🥇🏆 Trying, cause 'Trying is winning'.</p>
-    <div class="theme-toggle" onclick="toggleTheme()">
-      <i id="theme-icon" class="fas fa-moon"></i>
-    </div>
-  </header>
-
-  <section class="profile">
-	  <div class="profile-image">
-      <img src="profile-image.jpg" alt="Profile Image" width="100" height="100">
-      <div class="profile-name">
-        <h2 class="name">MD. MUBTASHIM FUAD</h2>
-        <p class="title">DevOps | AWS | Docker | K8s | Linux | CCNA | MTCNA | MTCRE</p>
-      </div>
-    </div>
-    <div class="profile-text">
-      <h3>About me</h3>
-      <p class="about-text">I'm passionate about all things Cloud, Linux, Computer systems, and networking, with a strong craving to automate all repetitive and boring tasks.</p>
-      <div class="cv-button">
-        <button>Download CV</button>	
-        <button>My Blog</button>
-      </div>
-      <div class="social-icons">
-        <a href="mailto:contact.themmfuad@gmail.com"><i class="fas fa-envelope"></i></a>
-        <a href="https://www.linkedin.com/in/themmfuad/"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/themmfuad"><i class="fab fa-github"></i></a>
-        <a href="https://x.com/themmfuad"><i class="fab fa-twitter"></i></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="info-grid">
-    <div class="info-section">
-      <h3>Skills</h3>
-      <div class="skill-item">
-	      <i class="fa-solid fa-laptop-code"></i> <strong>DevOps</strong><br>
-        <span>I'm specialized in streamlining development and operations, making software delivery faster and more reliable. From automation to cloud deployment.</span>
-      </div>
-      <div class="skill-item">
-	      <i class="fa-brands fa-aws"></i> <strong>AWS</strong><br>
-        <span>I'm experienced in designing and managing scalable, secure cloud solutions on AWS. Whether it's EC2, S3, or full-stack infrastructure</span>
-      </div>
-      <div class="skill-item">
-	      <i class="fa-brands fa-docker"></i> <strong>Docker & K8s</strong><br>
-        <span>I can containerize applications with Docker to keep them consistent across environments, and use Kubernetes to manage and scale them reliably. I can build systems that are smooth to deploy and easy to maintain.</span>
-      </div>
-      <div class="skill-item">
-	      <i class="fa-brands fa-linux"></i> <strong>Linux</strong><br>
-	      <span>I'm experienced in managing Linux systems, from configuring servers and automating tasks with shell scripts to resolving issues at the command line.</span>
-      </div>
-      <div class="skill-item">
-	      <i class="fa-solid fa-network-wired"></i> <strong>CCNA | MTCNA | MTCRE</strong><br>
-	      <span>I’ve completed professional training and gained hands-on job experience in networking, focusing on CCNA, MTCNA, and MTCRE-level skills. I'm also vendor-certified in MikroTik’s MTCNA, validating my expertise in real-world network design and management.</span>
-      </div>
-    
-    </div>
-    <div class="info-section">
-      <h3>Experience</h3>
-      <div class="job-item">
-        <strong>Assistant Network Engineer</strong><br>
-        <span class="item-logo">
-<img src="maxhub.jpg" alt="Maxhub" width="20" height="20">
-	</span>MaxHub Limited<br>
-        <span>Dec 2023 - Present</span>
-      </div>
-    </div>
-    <div class="info-section">
-      <h3>Education</h3>
-      <div class="edu-item">
-	      <strong>B.Sc. in Computer Science and Engineering</strong><br>
-        <span class="item-logo">
-<img src="diu.jpg" alt="DIU" width="20" height="20">
-	</span>Dhaka International University<br>
-        <span>Went through tough situations while picking up new skills fast — special shoutout to Calculus for the pain.</span>
-      </div>
-      <div class="edu-item">
-        <strong>Diploma in Computer Technology</strong><br>
-        <span class="item-logo">
-<img src="npi.jpg" alt="DIU" width="20" height="20">
-	</span>Naogaon Polytechnic Institute<br>
-        <span>Learned practical skills, especially in computer networks, and gained solid knowledge of core computer technologies.</span>
-      </div>
-    </div>
-  </section>
-
+<!DOCTYPE html>
 
-  <footer>
-	  <p class="quote">&copy; 2025 MD MUBTASHIM FUAD. All rights reserved.</p>
-  </footer>
-  <script>
-    function toggleTheme() {
-      const html = document.documentElement;
-      const currentTheme = html.getAttribute('data-theme');
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-      document.getElementById('theme-icon').className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-    }
-
-    // Load saved theme on startup
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    document.getElementById('theme-icon').className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-  </script>
-</body>
-</html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Responsive CV Page</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        --bg-color: #fff;
+
+        --text-color: #000;
+
+        --icon-color: #353935;
+      }
+
+      [data-theme="dark"] {
+        --bg-color: #121212;
+
+        --text-color: #f5f5f5;
+
+        --icon-color: #aaa;
+      }
+
+      body {
+        margin: 0;
+
+        font-family: Arial, sans-serif;
+
+        background-color: var(--bg-color);
+
+        color: var(--text-color);
+      }
+
+      header {
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        padding: 0px 15px;
+
+        border-bottom: 1px solid #ccc;
+      }
+
+      .nav-links {
+        display: flex;
+
+        gap: 1rem;
+      }
+
+      .theme-toggle {
+        cursor: pointer;
+
+        font-size: 1.2rem;
+      }
+
+      .profile {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        padding: 2rem;
+      }
+
+      .profile-image {
+        flex: 1 1;
+
+        text-align: center;
+      }
+
+      .profile-image img {
+        width: 150px;
+
+        height: 150px;
+
+        border-radius: 10px;
+      }
+
+      .profile-text {
+        flex: 1 1;
+      }
+
+      .profile-name {
+        margin-top: 1rem;
+
+        text-align: center;
+      }
+
+      .cv-button {
+        margin: 1rem 0;
+      }
+
+      .social-icons {
+        display: flex;
+
+        gap: 1rem;
+
+        font-size: 1.2rem;
+      }
+
+      .info-grid {
+        display: grid;
+
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+        gap: 2rem;
+
+        padding: 2rem;
+      }
+
+      .info-section h3 {
+        margin-bottom: 1rem;
+      }
+
+      .skill-item,
+      .job-item,
+      .edu-item {
+        margin-bottom: 1rem;
+      }
+
+      .skill-item i {
+        margin-right: 0.5rem;
+      }
+
+      .item-logo {
+        display: inline-block;
+
+        width: 20px;
+
+        height: 20px;
+
+        background-color: #aaa;
+
+        margin-right: 0.5rem;
+
+        vertical-align: middle;
+      }
+      .name {
+        margin: 0px;
+      }
+      .title {
+        margin: 0px;
+        padding-top: 0.2rem;
+        color: #800000;
+      }
+      .social-icons a {
+        color: #353935;
+        color: var(--icon-color);
+      }
+
+      .social-icons a:hover {
+        color: #800000;
+      }
+      .about-text {
+        width: 25rem;
+      }
+
+      .quote {
+        text-align: center;
+      }
+      
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+
+        .hamburger {
+          display: block;
+
+          cursor: pointer;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <img src="logo.svg" alt="Logo" width="40" height="40" />
+      </div>
+      <p class="quote">🥇🏆 Trying, cause 'Trying is winning'.</p>
+
+      <div class="theme-toggle" onclick="toggleTheme()">
+        <i id="theme-icon" class="fas fa-moon"></i>
+      </div>
+    </header>
+
+    <section class="profile">
+      <div class="profile-image">
+        <img
+          src="profile-image.jpg"
+          alt="Profile Image"
+          width="100"
+          height="100"
+        />
+
+        <div class="profile-name">
+          <h2 class="name">MD MUBTASHIM FUAD</h2>
+
+          <p class="title">
+            DevOps | AWS | Docker | K8s | Linux | CCNA | MTCNA | MTCRE
+          </p>
+        </div>
+      </div>
+
+      <div class="profile-text">
+        <h3>About me</h3>
+
+        <p class="about-text">
+          I'm passionate about all things Cloud, Linux, Computer systems, and
+          networking, with a strong craving to automate all repetitive and
+          boring tasks.
+        </p>
+
+        <div class="cv-button">
+          <button>Download CV</button>
+
+	  <button><a href="/blog">My Blog</a></button>
+        </div>
+        <div class="social-icons">
+          <a href="mailto:contact.themmfuad@gmail.com"
+            ><i class="fas fa-envelope"></i
+          ></a>
+
+          <a href="https://www.linkedin.com/in/themmfuad/"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+
+          <a href="https://github.com/themmfuad"
+            ><i class="fab fa-github"></i
+          ></a>
+
+          <a href="https://x.com/themmfuad"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-grid">
+      <div class="info-section">
+        <h3>Skills</h3>
+
+        <div class="skill-item">
+          <i class="fa-solid fa-laptop-code"></i> <strong>DevOps</strong><br />
+
+          <span
+            >I'm specialized in streamlining development and operations, making
+            software delivery faster and more reliable. From automation to cloud
+            deployment.</span
+          >
+        </div>
+
+        <div class="skill-item">
+          <i class="fa-brands fa-aws"></i> <strong>AWS</strong><br />
+
+          <span
+            >I'm experienced in designing and managing scalable, secure cloud
+            solutions on AWS. Whether it's EC2, S3, or full-stack
+            infrastructure</span
+          >
+        </div>
+
+        <div class="skill-item">
+          <i class="fa-brands fa-docker"></i> <strong>Docker & K8s</strong
+          ><br />
+
+          <span
+            >I can containerize applications with Docker to keep them consistent
+            across environments, and use Kubernetes to manage and scale them
+            reliably. I can build systems that are smooth to deploy and easy to
+            maintain.</span
+          >
+        </div>
+
+        <div class="skill-item">
+          <i class="fa-brands fa-linux"></i> <strong>Linux</strong><br />
+
+          <span
+            >I'm experienced in managing Linux systems, from configuring servers
+            and automating tasks with shell scripts to resolving issues at the
+            command line.</span
+          >
+        </div>
+
+        <div class="skill-item">
+          <i class="fa-solid fa-network-wired"></i>
+          <strong>CCNA | MTCNA | MTCRE</strong><br />
+
+          <span
+            >I’ve completed professional training and gained hands-on job
+            experience in networking, focusing on CCNA, MTCNA, and MTCRE-level
+            skills. I'm also vendor-certified in MikroTik’s MTCNA, validating my
+            expertise in real-world network design and management.</span
+          >
+        </div>
+      </div>
+
+      <div class="info-section">
+        <h3>Experience</h3>
+
+        <div class="job-item">
+          <strong>Assistant Network Engineer</strong><br />
+
+          <span class="item-logo">
+            <img src="maxhub.jpg" alt="Maxhub" width="20" height="20" /> </span
+          >MaxHub Limited<br />
+
+          <span>Dec 2023 - Present</span>
+        </div>
+      </div>
+
+      <div class="info-section">
+        <h3>Education</h3>
+
+        <div class="edu-item">
+          <strong>B.Sc. in Computer Science and Engineering</strong><br />
+
+          <span class="item-logo">
+            <img src="diu.jpg" alt="DIU" width="20" height="20" /> </span
+          >Dhaka International University<br />
+
+          <span
+            >Went through tough situations while picking up new skills fast —
+            special shoutout to Calculus for the pain.</span
+          >
+        </div>
+
+        <div class="edu-item">
+          <strong>Diploma in Computer Technology</strong><br />
+
+          <span class="item-logo">
+            <img src="npi.jpg" alt="DIU" width="20" height="20" /> </span
+          >Naogaon Polytechnic Institute<br />
+
+          <span
+            >Learned practical skills, especially in computer networks, and
+            gained solid knowledge of core computer technologies.</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p class="quote">&copy; 2025 MD MUBTASHIM FUAD. All rights reserved.</p>
+    </footer>
+
+    <script>
+      function toggleTheme() {
+        const html = document.documentElement;
+
+        const currentTheme = html.getAttribute("data-theme");
+
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+        html.setAttribute("data-theme", newTheme);
+
+        localStorage.setItem("theme", newTheme);
+
+        document.getElementById("theme-icon").className =
+          newTheme === "dark" ? "fas fa-sun" : "fas fa-moon";
+      }
+
+      // Load saved theme on startup
+
+      const savedTheme = localStorage.getItem("theme") || "light";
+
+      document.documentElement.setAttribute("data-theme", savedTheme);
+
+      document.getElementById("theme-icon").className =
+        savedTheme === "dark" ? "fas fa-sun" : "fas fa-moon";
+    </script>
+  </body>
+</html>
