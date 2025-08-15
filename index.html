@@ -6,7 +6,8 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Responsive CV Page</title>
+    <title>MM FUAD</title>
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
 
     <link
       rel="stylesheet"
@@ -68,6 +69,8 @@
         display: flex;
 
         flex-wrap: wrap;
+
+        justify-content: center; /* centers items horizontally */
 
         padding: 2rem;
       }
@@ -149,17 +152,19 @@
         margin: 0px;
       }
       .title {
-        margin: 0px;
+        margin: 0;
         padding-top: 0.2rem;
-        color: #800000;
+        color: #1f51ff;
+        text-align: center;
       }
+
       .social-icons a {
         color: #353935;
         color: var(--icon-color);
       }
 
       .social-icons a:hover {
-        color: #800000;
+        color: #1f51ff;
       }
       .about-text {
         width: 25rem;
@@ -168,7 +173,7 @@
       .quote {
         text-align: center;
       }
-      
+
       a {
         text-decoration: none;
         color: inherit;
@@ -183,6 +188,39 @@
 
           cursor: pointer;
         }
+      }
+      /* experiment */
+      .cv-button a.btn,
+      .cv-button button {
+        background-color: transparent; /* outline style */
+        color: #1f51ff;
+        border: 2px solid #1f51ff;
+        padding: 0.4rem 1rem; /* slightly smaller for text size match */
+        font-size: 1rem; /* matches surrounding text */
+        border-radius: 6px;
+        cursor: pointer;
+        text-decoration: none;
+        margin-right: 0.5rem; /* reduced gap between buttons */
+        transition: all 0.2s ease;
+      }
+
+      .cv-button a.btn:hover,
+      .cv-button button:hover {
+        background-color: #1f51ff; /* fill on hover */
+        color: #fff;
+      }
+
+      .cv-button a.btn:focus,
+      .cv-button button:focus {
+        outline: none;
+        background-color: #1f51ff; /* fill on focus */
+        color: #fff;
+      }
+
+      .cv-button {
+        margin-top: 1.2rem; /* space between buttons and profile text */
+
+        margin-bottom: 1.3rem; /* space between buttons and social icons */
       }
     </style>
   </head>
@@ -212,7 +250,8 @@
           <h2 class="name">MD MUBTASHIM FUAD</h2>
 
           <p class="title">
-            DevOps | AWS | Docker | K8s | Linux | CCNA | MTCNA | MTCRE
+            Cloud | DevSecOps | AWS<br />Docker | K8s | Linux | CCNA | MTCNA |
+            MTCRE
           </p>
         </div>
       </div>
@@ -221,16 +260,31 @@
         <h3>About me</h3>
 
         <p class="about-text">
-          I'm passionate about all things Cloud, Linux, Computer systems, and
-          networking, with a strong craving to automate all repetitive and
-          boring tasks.
+          I’m a Network Engineer leveraging my networking expertise to build
+          scalable, secure, and automated cloud systems. Passionate about Cloud,
+          Linux, and DevSecOps, I enjoy automating repetitive tasks, optimizing
+          infrastructure, and integrating security at every stage. I’m
+          constantly learning and applying tools like AWS, Docker, and
+          Kubernetes to bridge traditional networking with modern cloud-native
+          environments.
         </p>
+        <!-- cv buttons -->
+        <!-- <div class="cv-button">
+          <a href="MD-MUBTASHIM-FUAD-Resume.pdf"
+            ><button>Download Resume</button></a
+          >
+
+          <a href="/blog"><button>My Blog</button></a>
+        </div> -->
 
         <div class="cv-button">
-          <button>Download CV</button>
-
-	  <button><a href="/blog">My Blog</a></button>
+          <a href="MD-MUBTASHIM-FUAD-Resume.pdf" download class="btn"
+            >Download Resume</a
+          >
+          <a href="/blog" class="btn">My Blog</a>
         </div>
+
+        <!-- social icons -->
         <div class="social-icons">
           <a href="mailto:contact.themmfuad@gmail.com"
             ><i class="fas fa-envelope"></i
@@ -254,7 +308,8 @@
         <h3>Skills</h3>
 
         <div class="skill-item">
-          <i class="fa-solid fa-laptop-code"></i> <strong>DevOps</strong><br />
+          <i class="fa-solid fa-laptop-code"></i> <strong>DevSecOps</strong
+          ><br />
 
           <span
             >I'm specialized in streamlining development and operations, making
@@ -325,7 +380,7 @@
       <div class="info-section">
         <h3>Education</h3>
 
-        <div class="edu-item">
+        <!-- <div class="edu-item">
           <strong>B.Sc. in Computer Science and Engineering</strong><br />
 
           <span class="item-logo">
@@ -336,7 +391,7 @@
             >Went through tough situations while picking up new skills fast —
             special shoutout to Calculus for the pain.</span
           >
-        </div>
+        </div> -->
 
         <div class="edu-item">
           <strong>Diploma in Computer Technology</strong><br />
@@ -348,6 +403,19 @@
           <span
             >Learned practical skills, especially in computer networks, and
             gained solid knowledge of core computer technologies.</span
+          >
+        </div>
+        <div class="edu-item">
+          <strong>Secondary School Certificate</strong><br />
+
+          <span class="item-logo">
+            <img src="nzs.png" alt="NZS" width="20" height="20" /> </span
+          >Naogaon Zilla School<br />
+
+          <span
+            >My years at this school have been full of invaluable lessons, but
+            the one that continues to guide me is: 'Being well-educated means
+            being self-educated'</span
           >
         </div>
       </div>
